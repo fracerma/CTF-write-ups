@@ -1,2 +1,2 @@
 # Write ups
-Write ups that I collect during my journey in the CTF's world
+Write ups I have collected during my little experiences in the world of CTFs
