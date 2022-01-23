@@ -42,7 +42,7 @@ Request urlencoded:
 http://xx.xxx.xx.xxx/xxxxx/set-config?data=%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3C%21DOCTYPE%20foo%20%5B%20%3C%21ENTITY%20file%20SYSTEM%20%22main.py%22%20%3E%20%5D%3E%3Cconfig%3E%3Clocation%3E%26file%3B%3C%2Flocation%3E%3C%2Fconfig%3E
 ```
 ## Flag 1
-It's a flask server and we have an import to another file `rng.py` where we find how the generation of the random value work.
+It's a flask server and we have an import to another file `rng.py` where we find how the generation of the random value works.
 I try I bit to understand the logic behind the generation.
 ```python
 def setup(seed):
@@ -78,7 +78,7 @@ setup((random.randrange(0x10000) << 16) | random.randrange(0x10000))
 
 We have 32 bit seed and a 64 bit state that is used to generate the next pseudo-random value.
 I decide to try with symbolic resolution with z3. 
-After modifying a bit the code I start to produce 1 error values and are use it to reconstruct the seed, but it's seems that it's not enought.
+After modifying a bit the code I start to produce 1 error values and use it to reconstruct the seed, but it's seems that it's not enought.
 Restarting the challenge and trying with 2 values we get the flag.
 All the code is in the `x.py` file.
 
